@@ -1,3 +1,17 @@
 #+TITLE: Using work queues in RabbitMQ and Python
 
+** Contents                                                           :TOC_3:
+  - [[#environment-description][Environment description]]
+    - [[#python-requirements][Python requirements]]
 
+** Environment description
+
+- Deployed RabbitMQ 3.8.11
+
+- Python 3.9.1
+
+*** Python requirements
+
+#+BEGIN_SRC conf :tangle requirements.txt
+pika==1.1.0
+#+END_SRC
