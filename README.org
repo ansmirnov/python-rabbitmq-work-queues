@@ -3,6 +3,7 @@
 ** Contents                                                           :TOC_3:
   - [[#environment-description][Environment description]]
     - [[#python-requirements][Python requirements]]
+  - [[#references][References]]
 
 ** Environment description
 
@@ -15,3 +16,9 @@
 #+BEGIN_SRC conf :tangle requirements.txt
 pika==1.1.0
 #+END_SRC
+
+** References
+
+1. https://www.rabbitmq.com/tutorials/tutorial-two-python.html
+
+2. https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html
