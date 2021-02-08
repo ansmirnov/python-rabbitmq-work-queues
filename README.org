@@ -120,6 +120,11 @@ channel.basic_publish(
 connection.close()
 #+END_SRC
 
+** Consumer
+   :PROPERTIES:
+   :header-args: :session *shell rabbitmq consumer* :results silent raw :tangle src/consumer.py
+   :END:
+
 ** References
 
 1. https://www.rabbitmq.com/tutorials/tutorial-two-python.html
