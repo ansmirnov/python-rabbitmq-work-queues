@@ -6,6 +6,7 @@
     - [[#imports][Imports]]
     - [[#parameters][Parameters]]
     - [[#queue-parameters][Queue parameters]]
+    - [[#messages-parameters][Messages parameters]]
     - [[#creds][Creds]]
     - [[#declare-queue][Declare queue]]
   - [[#references][References]]
@@ -51,6 +52,12 @@ RABBITMQ_PASSWORD = os.environ.get("RABBITMQ_PASSWORD")
 #+BEGIN_SRC python
 RABBITMQ_QUEUE = os.environ.get("RABBITMQ_QUEUE")
 RABBITME_DURABLE = bool(os.environ.get("RABBITME_DURABLE"))
+#+END_SRC
+
+*** Messages parameters
+
+#+BEGIN_SRC python
+RABBITMQ_DELIVERY_MODE=int(os.environ.get("RABBITMQ_DELIVERY_MODE"))
 #+END_SRC
 
 *** Creds
