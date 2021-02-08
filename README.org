@@ -21,6 +21,7 @@
     - [[#channel-parameters][Channel parameters]]
     - [[#creds-1][Creds]]
     - [[#connection-1][Connection]]
+    - [[#channel-1][Channel]]
   - [[#references][References]]
 
 ** Environment description
@@ -175,6 +176,12 @@ credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
 connection = pika.BlockingConnection(
     pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials)
 )
+#+END_SRC
+
+*** Channel
+
+#+BEGIN_SRC python
+channel = connection.channel()
 #+END_SRC
 
 ** References
