@@ -26,6 +26,7 @@
     - [[#callback][Callback]]
     - [[#configure-qos][Configure QOS]]
     - [[#set-callback][Set callback]]
+    - [[#start-consuming][Start consuming]]
   - [[#references][References]]
 
 ** Environment description
@@ -214,6 +215,12 @@ channel.basic_qos(prefetch_count=RABBITMQ_PREFETCH_COUNT)
 
 #+BEGIN_SRC python
 channel.basic_consume(queue=RABBITMQ_QUEUE, on_message_callback=callback)
+#+END_SRC
+
+*** Start consuming
+
+#+BEGIN_SRC python
+channel.start_consuming()
 #+END_SRC
 
 ** References
