@@ -2,7 +2,6 @@
 
 ** Contents                                                           :TOC_3:
   - [[#environment-description][Environment description]]
-    - [[#python-requirements][Python requirements]]
   - [[#references][References]]
 
 ** Environment description
@@ -11,7 +10,7 @@
 
 - Python 3.9.1
 
-*** Python requirements
+Python requirements
 
 #+BEGIN_SRC conf :tangle requirements.txt
 pika==1.1.0
