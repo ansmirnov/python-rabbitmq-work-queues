@@ -20,6 +20,7 @@
     - [[#queue-parameters-1][Queue parameters]]
     - [[#channel-parameters][Channel parameters]]
     - [[#creds-1][Creds]]
+    - [[#connection-1][Connection]]
   - [[#references][References]]
 
 ** Environment description
@@ -166,6 +167,14 @@ RABBITMQ_PREFETCH_COUNT = int(os.environ.get("RABBITMQ_PREFETCH_COUNT"))
 
 #+BEGIN_SRC python
 credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
+#+END_SRC
+
+*** Connection
+
+#+BEGIN_SRC python
+connection = pika.BlockingConnection(
+    pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials)
+)
 #+END_SRC
 
 ** References
