@@ -198,11 +198,13 @@ channel.queue_declare(queue=RABBITMQ_QUEUE, durable=RABBITMQ_DURABLE)
 *** Callback
 
 #+BEGIN_SRC python
+
 def callback(ch, method, properties, body):
     print("Received %r" % body)
     time.sleep(body.count(b'.'))
     print("Done")
     ch.basic_ack(delivery_tag=method.delivery_tag)
+
 #+END_SRC
 
 *** Configure QOS
