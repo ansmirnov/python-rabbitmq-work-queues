@@ -24,6 +24,7 @@
     - [[#channel-1][Channel]]
     - [[#declare-queue-1][Declare queue]]
     - [[#callback][Callback]]
+    - [[#configure-qos][Configure QOS]]
   - [[#references][References]]
 
 ** Environment description
@@ -200,6 +201,12 @@ def callback(ch, method, properties, body):
     time.sleep(body.count(b'.'))
     print("Done")
     ch.basic_ack(delivery_tag=method.delivery_tag)
+#+END_SRC
+
+*** Configure QOS
+
+#+BEGIN_SRC python
+channel.basic_qos(prefetch_count=RABBITMQ_PREFETCH_COUNT)
 #+END_SRC
 
 ** References
