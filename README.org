@@ -15,6 +15,7 @@
     - [[#publish][Publish]]
     - [[#close-the-connection][Close the connection]]
   - [[#consumer][Consumer]]
+    - [[#imports-1][Imports]]
   - [[#references][References]]
 
 ** Environment description
@@ -124,6 +125,17 @@ connection.close()
    :PROPERTIES:
    :header-args: :session *shell rabbitmq consumer* :results silent raw :tangle src/consumer.py :shebang "#!/usr/bin/env python"
    :END:
+
+*** Imports
+
+#+BEGIN_SRC python
+import os
+import time
+#+END_SRC
+
+#+BEGIN_SRC python
+import pika
+#+END_SRC
 
 ** References
 
