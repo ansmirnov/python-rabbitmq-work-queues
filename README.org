@@ -57,7 +57,7 @@ RABBITMQ_PASSWORD = os.environ.get("RABBITMQ_PASSWORD")
 
 #+BEGIN_SRC python
 RABBITMQ_QUEUE = os.environ.get("RABBITMQ_QUEUE")
-RABBITME_DURABLE = bool(os.environ.get("RABBITME_DURABLE"))
+RABBITMQ_DURABLE = bool(os.environ.get("RABBITME_DURABLE"))
 #+END_SRC
 
 *** Messages parameters
