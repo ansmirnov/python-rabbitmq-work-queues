@@ -10,6 +10,7 @@
     - [[#creds][Creds]]
     - [[#declare-queue][Declare queue]]
     - [[#message][Message]]
+    - [[#publish][Publish]]
   - [[#references][References]]
 
 ** Environment description
@@ -81,6 +82,18 @@ channel.queue_declare(queue=RABBITMQ_QUEUE, durable=RABBITMQ_DURABLE)
 
 #+BEGIN_SRC python
 message = ' '.join(sys.argv[1:]) or "Hello World!"
+#+END_SRC
+
+*** Publish
+
+#+BEGIN_SRC python
+channel.basic_publish(
+    exchange='',
+    routing_key=RABBITMQ_QUEUE,
+    body=message,
+    properties=pika.BasicProperties(
+        delivery_mode=RABBITMQ_DELIVERY_MODE,
+    ))
 #+END_SRC
 
 ** References
