@@ -19,6 +19,7 @@
     - [[#parameters-1][Parameters]]
     - [[#queue-parameters-1][Queue parameters]]
     - [[#channel-parameters][Channel parameters]]
+    - [[#creds-1][Creds]]
   - [[#references][References]]
 
 ** Environment description
@@ -159,6 +160,12 @@ RABBITMQ_DURABLE = bool(os.environ.get("RABBITME_DURABLE"))
 
 #+BEGIN_SRC python
 RABBITMQ_PREFETCH_COUNT = int(os.environ.get("RABBITMQ_PREFETCH_COUNT"))
+#+END_SRC
+
+*** Creds
+
+#+BEGIN_SRC python
+credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
 #+END_SRC
 
 ** References
