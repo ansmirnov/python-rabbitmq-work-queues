@@ -31,7 +31,7 @@ pika==1.1.0
 
 ** Producer
    :PROPERTIES:
-   :header-args: :session *shell rabbitmq producer* :results silent raw :tangle src/producer.py
+   :header-args: :session *shell rabbitmq producer* :results silent raw :tangle src/producer.py :shebang "#!/usr/bin/env python"
    :END:
 
 *** Imports
