@@ -8,10 +8,12 @@
     - [[#queue-parameters][Queue parameters]]
     - [[#messages-parameters][Messages parameters]]
     - [[#creds][Creds]]
+    - [[#connection][Connection]]
     - [[#declare-queue][Declare queue]]
     - [[#message][Message]]
     - [[#publish][Publish]]
     - [[#close-the-connection][Close the connection]]
+  - [[#consumer][Consumer]]
   - [[#references][References]]
 
 ** Environment description
@@ -71,6 +73,14 @@ RABBITMQ_DELIVERY_MODE = int(os.environ.get("RABBITMQ_DELIVERY_MODE"))
 
 #+BEGIN_SRC python
 credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
+#+END_SRC
+
+*** Connection
+
+#+BEGIN_SRC python
+connection = pika.BlockingConnection(
+    pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials)
+)
 #+END_SRC
 
 *** Declare queue
