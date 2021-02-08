@@ -9,6 +9,7 @@
     - [[#messages-parameters][Messages parameters]]
     - [[#creds][Creds]]
     - [[#declare-queue][Declare queue]]
+    - [[#message][Message]]
   - [[#references][References]]
 
 ** Environment description
@@ -70,6 +71,12 @@ credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
 
 #+BEGIN_SRC python
 channel.queue_declare(queue=RABBITMQ_QUEUE, durable=RABBITMQ_DURABLE)
+#+END_SRC
+
+*** Message
+
+#+BEGIN_SRC python
+message = ' '.join(sys.argv[1:]) or "Hello World!"
 #+END_SRC
 
 ** References
