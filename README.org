@@ -18,6 +18,7 @@
     - [[#imports-1][Imports]]
     - [[#parameters-1][Parameters]]
     - [[#queue-parameters-1][Queue parameters]]
+    - [[#channel-parameters][Channel parameters]]
   - [[#references][References]]
 
 ** Environment description
@@ -152,6 +153,12 @@ RABBITMQ_PASSWORD = os.environ.get("RABBITMQ_PASSWORD")
 #+BEGIN_SRC python
 RABBITMQ_QUEUE = os.environ.get("RABBITMQ_QUEUE")
 RABBITMQ_DURABLE = bool(os.environ.get("RABBITME_DURABLE"))
+#+END_SRC
+
+*** Channel parameters
+
+#+BEGIN_SRC python
+RABBITMQ_PREFETCH_COUNT = int(os.environ.get("RABBITMQ_PREFETCH_COUNT"))
 #+END_SRC
 
 ** References
