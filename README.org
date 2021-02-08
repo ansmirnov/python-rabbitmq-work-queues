@@ -2,6 +2,8 @@
 
 ** Contents                                                           :TOC_3:
   - [[#environment-description][Environment description]]
+  - [[#producer][Producer]]
+    - [[#imports][Imports]]
   - [[#references][References]]
 
 ** Environment description
@@ -14,6 +16,22 @@ Python requirements
 
 #+BEGIN_SRC conf :tangle requirements.txt
 pika==1.1.0
+#+END_SRC
+
+** Producer
+*** Imports
+
+Import system modules.
+
+#+BEGIN_SRC python
+import os
+import sys
+#+END_SRC
+
+Import pika.
+
+#+BEGIN_SRC python
+import pika
 #+END_SRC
 
 ** References
