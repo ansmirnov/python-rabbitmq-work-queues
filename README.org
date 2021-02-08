@@ -11,6 +11,7 @@
     - [[#declare-queue][Declare queue]]
     - [[#message][Message]]
     - [[#publish][Publish]]
+    - [[#close-the-connection][Close the connection]]
   - [[#references][References]]
 
 ** Environment description
@@ -94,6 +95,12 @@ channel.basic_publish(
     properties=pika.BasicProperties(
         delivery_mode=RABBITMQ_DELIVERY_MODE,
     ))
+#+END_SRC
+
+*** Close the connection
+
+#+BEGIN_SRC python
+connection.close()
 #+END_SRC
 
 ** References
