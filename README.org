@@ -22,6 +22,7 @@
     - [[#creds-1][Creds]]
     - [[#connection-1][Connection]]
     - [[#channel-1][Channel]]
+    - [[#declare-queue-1][Declare queue]]
   - [[#references][References]]
 
 ** Environment description
@@ -182,6 +183,12 @@ connection = pika.BlockingConnection(
 
 #+BEGIN_SRC python
 channel = connection.channel()
+#+END_SRC
+
+*** Declare queue
+
+#+BEGIN_SRC python
+channel.queue_declare(queue=RABBITMQ_QUEUE, durable=RABBITMQ_DURABLE)
 #+END_SRC
 
 ** References
