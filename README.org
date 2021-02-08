@@ -62,7 +62,7 @@ RABBITME_DURABLE = bool(os.environ.get("RABBITME_DURABLE"))
 *** Messages parameters
 
 #+BEGIN_SRC python
-RABBITMQ_DELIVERY_MODE=int(os.environ.get("RABBITMQ_DELIVERY_MODE"))
+RABBITMQ_DELIVERY_MODE = int(os.environ.get("RABBITMQ_DELIVERY_MODE"))
 #+END_SRC
 
 *** Creds
